@@ -3,889 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Years - Care for Our Elders</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Care & Love - Honoring Our Elders</title>
+    <meta name="description" content="A heartfelt tribute to the elderly who deserve our endless love, respect, and care.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
+        /* Warm and comforting color palette */
         :root {
-            --primary: #e67e22; /* Warm orange - representing care */
-            --secondary: #f39c12; /* Light orange - accent */
-            --accent: #d35400; /* Deep orange - highlight */
-            --light: #fef9f5; /* Cream - background */
-            --dark: #8e44ad; /* Soft purple - dark text */
-            --text: #5d4037; /* Warm brown - body text */
-            --white: #ffffff;
+            --cream: #faf6f0;
+            --soft-peach: #f9e4d4;
+            --warm-beige: #e8d8c8;
+            --sage-green: #a8b5a2;
+            --gentle-gold: #d4a574;
+            --deep-brown: #6b5e4e;
         }
 
+        * { margin:0; padding:0; box-sizing:border-box; }
         body {
-            background-color: var(--light);
-            color: var(--text);
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to bottom, var(--cream), var(--soft-peach));
+ in ok);
+            color: var(--deep-brown);
             line-height: 1.8;
         }
 
         header {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: var(--white);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),
+                        url('https://images.unsplash.com/photo-1581577882558-082bf7b6ed2e?w=2000&q=80') center/cover no-repeat;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        .logo i {
-            font-size: 2rem;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 2rem;
-        }
-
-        nav ul li a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 0.5rem 0;
-            position: relative;
-        }
-
-        nav ul li a:hover {
-            color: #fff8e1;
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: #fff8e1;
-            transition: width 0.3s ease;
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1596443686283-0b8b50c2a71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
-            align-items: center;
+            justify-content: center;
             text-align: center;
-            color: var(--white);
+            color: white;
         }
 
-        .hero-content {
+        .hero-text h1 {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+        }
+
+        .hero-text p {
+            font-size: 1.8rem;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        nav {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 4rem;
         }
 
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: var(--white);
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
+        nav a {
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: var(--deep-brown);
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
         }
 
-        .btn:hover {
-            background-color: var(--dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-        }
+        nav a:hover { color: var(--gentle-gold); }
 
         section {
-            padding: 5rem 0;
-        }
-
-        .section-title {
+            padding: 100px 10%;
             text-align: center;
+        }
+
+        h2 {
+            font-size: 3.5rem;
             margin-bottom: 3rem;
+            color: var(--gentle-gold);
         }
 
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--secondary);
-            border-radius: 2px;
-        }
-
-        .section-title p {
-            color: var(--text);
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-        }
-
-        .about-content {
+        .gallery {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-img {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .about-img:hover img {
-            transform: scale(1.05);
-        }
-
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .stat-item {
-            text-align: center;
-            padding: 2rem 1rem;
-            background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .stat-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .stat-item i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-item p {
-            color: var(--text);
-            font-weight: 500;
-        }
-
-        .initiatives {
-            background-color: var(--white);
-        }
-
-        .initiatives-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .initiative-card {
-            background-color: var(--light);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .initiative-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .initiative-img {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .initiative-img img {
+        .gallery img {
             width: 100%;
-            height: 100%;
+            height: 300px;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.4s;
         }
 
-        .initiative-card:hover .initiative-img img {
-            transform: scale(1.1);
+        .gallery img:hover {
+            transform: translateY(-15px);
         }
 
-        .initiative-content {
-            padding: 1.5rem;
+        .quote {
+            background: var(--warm-beige);
+            padding: 80px 10%;
+            font-size: 2rem;
+            font-style: italic;
+            color: var(--deep-brown);
         }
 
-        .initiative-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
+        .quote::before { content: '“'; font-size: 6rem; color: var(--gentle-gold); }
+        .quote::after { content: '”'; font-size: 6rem; color: var(--gentle-gold); }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
         }
 
-        .initiative-content p {
+        .card {
+            background: white;
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            font-size: 2rem;
             margin-bottom: 1.5rem;
-            font-size: 1.05rem;
-        }
-
-        .cta {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: var(--white);
-            text-align: center;
-            padding: 5rem 0;
-        }
-
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta .btn {
-            background-color: var(--white);
-            color: var(--primary);
-            font-size: 1.1rem;
-        }
-
-        .cta .btn:hover {
-            background-color: var(--light);
-            color: var(--accent);
+            color: var(--gentle-gold);
         }
 
         footer {
-            background-color: var(--dark);
-            color: var(--white);
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--secondary);
-        }
-
-        .footer-column p {
-            margin-bottom: 1rem;
-            color: #f1f1f1;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links li a {
-            color: #f1f1f1;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer-links li a:hover {
-            color: var(--secondary);
-            padding-left: 5px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background-color: var(--secondary);
-            transform: translateY(-5px);
-        }
-
-        .copyright {
+            background: var(--deep-brown);
+            color: var(--cream);
             text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #e0e0e0;
-        }
-
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Volunteer showcase slider */
-        .volunteer-slider {
-            margin: 4rem 0;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .slider-container {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .volunteer-card {
-            min-width: 33.333%;
-            padding: 0 1rem;
-        }
-
-        .volunteer-card-inner {
-            background: var(--white);
-            border-radius: 10px;
-            padding: 1.5rem;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .volunteer-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            overflow: hidden;
-            border: 3px solid var(--secondary);
-        }
-
-        .volunteer-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .volunteer-name {
+            padding: 80px 10%;
             font-size: 1.2rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
         }
 
-        .volunteer-role {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-weight: 500;
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 15px 40px;
+            background: var(--gentle-gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
         }
 
-        @media (max-width: 992px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .initiatives-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .volunteer-card {
-                min-width: 50%;
-            }
+        .btn:hover {
+            background: #c4915e;
+            transform: scale(1.05);
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary);
-                flex-direction: column;
-                padding: 1rem 0;
-                text-align: center;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            }
-            
-            nav ul.active {
-                display: flex;
-            }
-            
-            nav ul li {
-                margin: 0;
-                padding: 0.8rem 0;
-            }
-            
-            .mobile-menu {
-                display: block;
-            }
-            
-            .initiatives-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                grid-template-columns: 1fr;
-            }
-            
-            .volunteer-card {
-                min-width: 100%;
-            }
-        }
-
-        /* Counter animation */
-        .counter {
-            transition: all 0.5s ease;
+            .hero-text h1 { font-size: 3.5rem; }
+            .hero-text p { font-size: 1.4rem; }
+            nav ul { flex-direction: column; gap: 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+
     <header>
-        <div class="container nav-container">
-            <div class="logo">
-                <i class="fas fa-hands-helping"></i>
-                <span>Golden Years</span>
-            </div>
-            <nav>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#initiatives">Our Programs</a></li>
-                    <li><a href="#volunteers">Volunteers</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
-                </ul>
-            </nav>
+        <div class="hero-text">
+            <h1>Care & Love</h1>
+            <p>Because Every Wrinkle Tells a Beautiful Story</p>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <h1>Every Life Deserves Dignity & Care</h1>
-            <p>Stand with us to honor our elders—your time, kindness, and presence can light up their golden years</p>
-            <a href="#get-involved" class="btn">Become a Volunteer</a>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#stories">Stories</a></li>
+            <li><a href="#care">How to Care</a></li>
+            <li><a href="#gallery">Moments</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="stories">
+        <h2>Their Stories Matter</h2>
+        <p>Our elders have walked through decades of joy, hardship, love, and wisdom. Every line on their face is a chapter of resilience and grace.</p>
+
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1571771019784-3ff35f4f4277?w=1200&q=80" alt="Grandmother smiling warmly">
+            <img src="https://images.unsplash.com/photo-1581578734140-3e0cc9b55535?w=1200&q=80" alt="Elderly couple holding hands">
+            <img src="https://images.unsplash.com/photo-1582213782179-797770e2c9be?w=1200&q=80" alt="Grandfather teaching grandson">
+            <img src="https://images.unsplash.com/photo-1606216794192-eada5802aff7?w=1200&q=80" alt="Senior woman laughing joyfully">
+            <img src="https://images.unsplash.com/photo-1594731795539-85f43f673b1f?w=1200&q=80" alt="Elderly man reading to child">
+            <img src="https://images.unsplash.com/photo-1612277795358-30e2be2d9d3b?w=1200&q=80" alt="Grandparents with family">
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Golden Years</h2>
-                <p>We're a community dedicated to ensuring no elder feels lonely, neglected, or forgotten</p>
+    <div class="quote">
+        The glory of the young is their strength; the gray hair of experience is the splendor of the old.
+    </div>
+
+    <section id="care">
+        <h2>Ways to Show You Care</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Listen with Your Heart</h3>
+                <p>Sit beside them, hold their hand, and truly listen to their stories — even the ones you've heard a hundred times.</p>
             </div>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1574279606033-430f3475b86d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Volunteers with elders">
-                </div>
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Founded in 2015, Golden Years operates on the belief that aging should be celebrated, not endured. We focus on the needs of isolated seniors, empty-nesters, and those lacking family support.</p>
-                    <p>Beyond basic care, we prioritize emotional well-being—through companionship, cultural activities, skill-building workshops, and intergenerational connections that remind elders they matter.</p>
-                    <p>Across 28 cities, our network has served over 100,000 seniors, proving that small acts of kindness can create lasting impact.</p>
-                    <a href="#" class="btn">Read Our Story</a>
-                </div>
+            <div class="card">
+                <h3>Spend Quality Time</h3>
+                <p>A simple walk in the park, a shared meal, or watching their favorite old movie together means the world.</p>
             </div>
-            <div class="stats">
-                <div class="stat-item">
-                    <i class="fas fa-user-friends"></i>
-                    <h3 class="counter" data-target="12000">0</h3>
-                    <p>Volunteers</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-heart"></i>
-                    <h3 class="counter" data-target="105000">0</h3>
-                    <p>Seniors Served</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3 class="counter" data-target="28">0</h3>
-                    <p>Cities Covered</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-calendar-check"></i>
-                    <h3 class="counter" data-target="3800">0</h3>
-                    <p>Community Events</p>
-                </div>
+shtml            <div class="card">
+                <h3>Celebrate Their Wisdom</h3>
+                <p>Ask for their advice. Let them teach you the recipes, songs, and life lessons only they know.</p>
             </div>
+            <div class="card">
+                <h3>Small Acts, Big Love</h3>
+                <p>A warm blanket on a cold day, help with technology, or just saying “I love you” — never underestimate the power of kindness.</p>
+            </div>
+        </div>
+
+        <a href="#contact" class="btn">Start Caring Today</a>
+    </section>
+
+    <section id="gallery">
+        <h2>Captured Moments of Love</h2>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1559839915-4d2bd46e15b0?w=1200&q=80" alt="Grandma baking with granddaughter">
+            <img src="https://images.unsplash.com/photo-1603398936318-773695b7f3e8?w=1200&q=80" alt="Elderly couple dancing">
+            <img src="https://images.unsplash.com/photo-1582750430848-4d7d3e2f0df9?w=1200&q=80" alt="Senior enjoying garden">
+            <img src="https://images.unsplash.com/photo-1511630572396-5005b184943b?w=1200&q=80" alt="Family gathering with elders">
+            <img src="https://images.unsplash.com/photo-1574709225314-7b3c3c104fa2?w=1200&q=80" alt="Elderly woman with flowers">
+            <img src="https://images.unsplash.com/photo-1581579438667-8a970d8c11c0?w=1200&q=80" alt="Grandfather and grandson fishing">
         </div>
     </section>
 
-    <!-- Initiatives Section -->
-    <section class="initiatives" id="initiatives">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Programs</h2>
-                <p>Addressing the diverse needs of seniors through targeted, compassionate initiatives</p>
-            </div>
-            <div class="initiatives-grid">
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1568488589602-36335379503f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Companionship">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Daily Companions</h3>
-                        <p>Regular visits for isolated seniors—chatting, reading, walking, or celebrating holidays. Combating loneliness one conversation at a time.</p>
-                        <a href="#" class="btn">Request Visits</a>
-                    </div>
-                </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1579684385307-122158666485?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Health care">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Health Guardians</h3>
-                        <p>Free check-ups, wellness workshops, chronic disease management, and emergency support—keeping seniors healthy and secure.</p>
-                        <a href="#" class="btn">Book Services</a>
-                    </div>
-                </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1581579438344-097d26e197f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Tech help">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Tech for Seniors</h3>
-                        <p>Workshops on smartphone use, online safety, and digital communication—helping elders stay connected in a tech-driven world.</p>
-                        <a href="#" class="btn">View Schedule</a>
-                    </div>
-                </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1591035897812-2f6e6857f318?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Cultural events">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Joyful Gatherings</h3>
-                        <p>Talent shows, birthday parties, nature outings, and classic movie nights—creating moments of happiness and community.</p>
-                        <a href="#" class="btn">Event Calendar</a>
-                    </div>
-                </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1574281309827-8dc3d5572c78?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Practical help">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Practical Aid</h3>
-                        <p>Free haircuts, clothing repairs, appliance fixes, and errand-running—taking care of daily tasks that become challenging with age.</p>
-                        <a href="#" class="btn">Find Local Help</a>
-                    </div>
-                </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1593053279541-6089a8cc7533?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Intergenerational">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Bridging Generations</h3>
-                        <p>Connecting youth volunteers with seniors for story-sharing, craft workshops, and cultural exchanges—valuing wisdom and curiosity equally.</p>
-                        <a href="#" class="btn">Join the Program</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Volunteers Section -->
-    <section id="volunteers">
-        <div class="container">
-            <div class="section-title">
-                <h2>Voices of Our Volunteers</h2>
-                <p>Every volunteer brings unique light—here's what they say about their journey</p>
-            </div>
-            <div class="volunteer-slider">
-                <div class="slider-container">
-                    <div class="volunteer-card">
-                        <div class="volunteer-card-inner">
-                            <div class="volunteer-img">
-                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Volunteer">
-                            </div>
-                            <h4 class="volunteer-name">Emma Wilson</h4>
-                            <p class="volunteer-role">Companionship Volunteer</p>
-                            <p>"Listening to Mrs. Carter's stories about her youth feels like uncovering hidden history. She teaches me more than I could ever give her."</p>
-                        </div>
-                    </div>
-                    <div class="volunteer-card">
-                        <div class="volunteer-card-inner">
-                            <div class="volunteer-img">
-                                <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Volunteer">
-                            </div>
-                            <h4 class="volunteer-name">Michael Chen</h4>
-                            <p class="volunteer-role">Health Program Lead</p>
-                            <p>"Helping seniors manage their health gives them independence—and that's priceless. Their gratitude fuels my commitment."</p>
-                        </div>
-                    </div>
-                    <div class="volunteer-card">
-                        <div class="volunteer-card-inner">
-                            <div class="volunteer-img">
-                                <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Volunteer">
-                            </div>
-                            <h4 class="volunteer-name">Sophia Rodriguez</h4>
-                            <p class="volunteer-role">Youth Volunteer</p>
-                            <p>"My 85-year-old buddy taught me to knit, and I taught her to use TikTok. It's amazing how much we learn from each other."</p>
-                        </div>
-                    </div>
-                    <div class="volunteer-card">
-                        <div class="volunteer-card-inner">
-                            <div class="volunteer-img">
-                                <img src="https://images.unsplash.com/photo-1573140247632-f8fd72241d40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Volunteer">
-                            </div>
-                            <h4 class="volunteer-name">Robert Taylor</h4>
-                            <p class="volunteer-role">Retired Volunteer</p>
-                            <p>"After retiring, I wanted purpose. Now I help seniors with home repairs—we're peers, supporting each other through life's challenges."</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta" id="get-involved">
-        <div class="container">
-            <h2>Your Kindness Can Change Lives</h2>
-            <p>Whether you donate time, resources, or refer a senior in need—every contribution makes a difference in their golden years</p>
-            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                <a href="#" class="btn">Join as Volunteer</a>
-                <a href="#" class="btn">Donate Now</a>
-                <a href="#" class="btn">Refer Someone</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Golden Years</h3>
-                    <p>Dedicated to honoring our elders with dignity, companionship, and care. Together, we can ensure no one ages alone.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Our Programs</a></li>
-                        <li><a href="#volunteers">Volunteers</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Volunteer Guidelines</a></li>
-                        <li><a href="#">Service Request Form</a></li>
-                        <li><a href="#">Donation Transparency</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Compassion Lane, New York, NY 10001</p>
-                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
-                    <p><i class="fas fa-envelope"></i> hello@goldenyears.org</p>
-                    <p><i class="fas fa-clock"></i> Hours: Mon-Sun, 9:00 AM - 6:00 PM</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Golden Years Initiative | All Rights Reserved | 501(c)(3) Nonprofit</p>
-            </div>
-        </div>
+    <footer id="contact">
+        <h2>Every Day is a Chance to Love More</h2>
+        <p>Let’s honor our elders not just on special days, but every single day.<br>
+        Their love shaped us. Now it’s our turn to give it back.</p>
+        <p style="margin-top: 3rem; font-size: 1.5rem;">Made with <span style="color: #ff6b6b;">♥</span> for every grandparent in the world</p>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
-
-        // Counter animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200;
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const inc = target / speed;
-                
-                if(count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            });
-        }
-
-        window.addEventListener('load', animateCounters);
-
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    document.querySelector('nav ul').classList.remove('active');
-                }
-            });
-        });
-
-        // Volunteer slider
-        let currentSlide = 0;
-        const slider = document.querySelector('.slider-container');
-        const slides = document.querySelectorAll('.volunteer-card');
-        const slideWidth = slides[0].offsetWidth;
-        const totalSlides = slides.length;
-        const visibleSlides = window.innerWidth < 768 ? 1 : window.innerWidth < 992 ? 2 : 3;
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % (totalSlides - visibleSlides + 1);
-            slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-        }
-
-        setInterval(nextSlide, 5000);
-        window.addEventListener('resize', () => location.reload());
-    </script>
 </body>
 </html>
