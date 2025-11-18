@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>Golden Years - Care for Our Elders</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,19 +14,19 @@
         }
 
         :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
-            --text: #333333;
+            --primary: #e67e22; /* Warm orange - representing care */
+            --secondary: #f39c12; /* Light orange - accent */
+            --accent: #d35400; /* Deep orange - highlight */
+            --light: #fef9f5; /* Cream - background */
+            --dark: #8e44ad; /* Soft purple - dark text */
+            --text: #5d4037; /* Warm brown - body text */
             --white: #ffffff;
         }
 
         body {
             background-color: var(--light);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         header {
@@ -82,7 +82,7 @@
         }
 
         nav ul li a:hover {
-            color: var(--accent);
+            color: #fff8e1;
         }
 
         nav ul li a::after {
@@ -92,7 +92,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--accent);
+            background-color: #fff8e1;
             transition: width 0.3s ease;
         }
 
@@ -101,7 +101,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1596443686283-0b8b50c2a71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -125,6 +125,7 @@
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
 
         .btn {
@@ -142,7 +143,7 @@
         }
 
         .btn:hover {
-            background-color: var(--primary);
+            background-color: var(--dark);
             transform: translateY(-3px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
@@ -172,7 +173,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background-color: var(--accent);
+            background-color: var(--secondary);
             border-radius: 2px;
         }
 
@@ -180,6 +181,7 @@
             color: var(--text);
             max-width: 700px;
             margin: 0 auto;
+            font-size: 1.1rem;
         }
 
         .about-content {
@@ -214,6 +216,7 @@
 
         .about-text p {
             margin-bottom: 1.5rem;
+            font-size: 1.05rem;
         }
 
         .stats {
@@ -250,6 +253,7 @@
 
         .stat-item p {
             color: var(--text);
+            font-weight: 500;
         }
 
         .initiatives {
@@ -302,6 +306,7 @@
 
         .initiative-content p {
             margin-bottom: 1.5rem;
+            font-size: 1.05rem;
         }
 
         .cta {
@@ -327,11 +332,12 @@
         .cta .btn {
             background-color: var(--white);
             color: var(--primary);
+            font-size: 1.1rem;
         }
 
         .cta .btn:hover {
-            background-color: var(--accent);
-            color: var(--white);
+            background-color: var(--light);
+            color: var(--accent);
         }
 
         footer {
@@ -361,11 +367,12 @@
             left: 0;
             width: 40px;
             height: 2px;
-            background-color: var(--accent);
+            background-color: var(--secondary);
         }
 
         .footer-column p {
             margin-bottom: 1rem;
+            color: #f1f1f1;
         }
 
         .footer-links {
@@ -377,13 +384,13 @@
         }
 
         .footer-links li a {
-            color: var(--light);
+            color: #f1f1f1;
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .footer-links li a:hover {
-            color: var(--accent);
+            color: var(--secondary);
             padding-left: 5px;
         }
 
@@ -406,7 +413,7 @@
         }
 
         .social-links a:hover {
-            background-color: var(--accent);
+            background-color: var(--secondary);
             transform: translateY(-5px);
         }
 
@@ -414,12 +421,65 @@
             text-align: center;
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
         }
 
         .mobile-menu {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
+        }
+
+        /* Volunteer showcase slider */
+        .volunteer-slider {
+            margin: 4rem 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .volunteer-card {
+            min-width: 33.333%;
+            padding: 0 1rem;
+        }
+
+        .volunteer-card-inner {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .volunteer-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            overflow: hidden;
+            border: 3px solid var(--secondary);
+        }
+
+        .volunteer-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .volunteer-name {
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .volunteer-role {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 500;
         }
 
         @media (max-width: 992px) {
@@ -437,6 +497,10 @@
             
             .stats {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .volunteer-card {
+                min-width: 50%;
             }
         }
 
@@ -486,9 +550,13 @@
             .stats {
                 grid-template-columns: 1fr;
             }
+            
+            .volunteer-card {
+                min-width: 100%;
+            }
         }
 
-        /* Animation for stats counter */
+        /* Counter animation */
         .counter {
             transition: all 0.5s ease;
         }
@@ -499,8 +567,8 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+                <i class="fas fa-hands-helping"></i>
+                <span>Golden Years</span>
             </div>
             <nav>
                 <div class="mobile-menu">
@@ -508,10 +576,10 @@
                 </div>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#initiatives">Our Programs</a></li>
+                    <li><a href="#volunteers">Volunteers</a></li>
                     <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -520,9 +588,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+            <h1>Every Life Deserves Dignity & Care</h1>
+            <p>Stand with us to honor our elders—your time, kindness, and presence can light up their golden years</p>
+            <a href="#get-involved" class="btn">Become a Volunteer</a>
         </div>
     </section>
 
@@ -530,41 +598,41 @@
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>About Golden Years</h2>
+                <p>We're a community dedicated to ensuring no elder feels lonely, neglected, or forgotten</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+                    <img src="https://images.unsplash.com/photo-1574279606033-430f3475b86d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Volunteers with elders">
                 </div>
                 <div class="about-text">
                     <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
+                    <p>Founded in 2015, Golden Years operates on the belief that aging should be celebrated, not endured. We focus on the needs of isolated seniors, empty-nesters, and those lacking family support.</p>
+                    <p>Beyond basic care, we prioritize emotional well-being—through companionship, cultural activities, skill-building workshops, and intergenerational connections that remind elders they matter.</p>
+                    <p>Across 28 cities, our network has served over 100,000 seniors, proving that small acts of kindness can create lasting impact.</p>
+                    <a href="#" class="btn">Read Our Story</a>
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
+                    <i class="fas fa-user-friends"></i>
+                    <h3 class="counter" data-target="12000">0</h3>
+                    <p>Volunteers</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
+                    <i class="fas fa-heart"></i>
+                    <h3 class="counter" data-target="105000">0</h3>
+                    <p>Seniors Served</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3 class="counter" data-target="28">0</h3>
+                    <p>Cities Covered</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
+                    <i class="fas fa-calendar-check"></i>
+                    <h3 class="counter" data-target="3800">0</h3>
+                    <p>Community Events</p>
                 </div>
             </div>
         </div>
@@ -574,38 +642,122 @@
     <section class="initiatives" id="initiatives">
         <div class="container">
             <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <h2>Our Programs</h2>
+                <p>Addressing the diverse needs of seniors through targeted, compassionate initiatives</p>
             </div>
             <div class="initiatives-grid">
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
+                        <img src="https://images.unsplash.com/photo-1568488589602-36335379503f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Companionship">
                     </div>
                     <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <h3>Daily Companions</h3>
+                        <p>Regular visits for isolated seniors—chatting, reading, walking, or celebrating holidays. Combating loneliness one conversation at a time.</p>
+                        <a href="#" class="btn">Request Visits</a>
                     </div>
                 </div>
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
+                        <img src="https://images.unsplash.com/photo-1579684385307-122158666485?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Health care">
                     </div>
                     <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <h3>Health Guardians</h3>
+                        <p>Free check-ups, wellness workshops, chronic disease management, and emergency support—keeping seniors healthy and secure.</p>
+                        <a href="#" class="btn">Book Services</a>
                     </div>
                 </div>
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
+                        <img src="https://images.unsplash.com/photo-1581579438344-097d26e197f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Tech help">
                     </div>
                     <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <h3>Tech for Seniors</h3>
+                        <p>Workshops on smartphone use, online safety, and digital communication—helping elders stay connected in a tech-driven world.</p>
+                        <a href="#" class="btn">View Schedule</a>
+                    </div>
+                </div>
+                <div class="initiative-card">
+                    <div class="initiative-img">
+                        <img src="https://images.unsplash.com/photo-1591035897812-2f6e6857f318?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Cultural events">
+                    </div>
+                    <div class="initiative-content">
+                        <h3>Joyful Gatherings</h3>
+                        <p>Talent shows, birthday parties, nature outings, and classic movie nights—creating moments of happiness and community.</p>
+                        <a href="#" class="btn">Event Calendar</a>
+                    </div>
+                </div>
+                <div class="initiative-card">
+                    <div class="initiative-img">
+                        <img src="https://images.unsplash.com/photo-1574281309827-8dc3d5572c78?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Practical help">
+                    </div>
+                    <div class="initiative-content">
+                        <h3>Practical Aid</h3>
+                        <p>Free haircuts, clothing repairs, appliance fixes, and errand-running—taking care of daily tasks that become challenging with age.</p>
+                        <a href="#" class="btn">Find Local Help</a>
+                    </div>
+                </div>
+                <div class="initiative-card">
+                    <div class="initiative-img">
+                        <img src="https://images.unsplash.com/photo-1593053279541-6089a8cc7533?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Intergenerational">
+                    </div>
+                    <div class="initiative-content">
+                        <h3>Bridging Generations</h3>
+                        <p>Connecting youth volunteers with seniors for story-sharing, craft workshops, and cultural exchanges—valuing wisdom and curiosity equally.</p>
+                        <a href="#" class="btn">Join the Program</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteers Section -->
+    <section id="volunteers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Voices of Our Volunteers</h2>
+                <p>Every volunteer brings unique light—here's what they say about their journey</p>
+            </div>
+            <div class="volunteer-slider">
+                <div class="slider-container">
+                    <div class="volunteer-card">
+                        <div class="volunteer-card-inner">
+                            <div class="volunteer-img">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Volunteer">
+                            </div>
+                            <h4 class="volunteer-name">Emma Wilson</h4>
+                            <p class="volunteer-role">Companionship Volunteer</p>
+                            <p>"Listening to Mrs. Carter's stories about her youth feels like uncovering hidden history. She teaches me more than I could ever give her."</p>
+                        </div>
+                    </div>
+                    <div class="volunteer-card">
+                        <div class="volunteer-card-inner">
+                            <div class="volunteer-img">
+                                <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Volunteer">
+                            </div>
+                            <h4 class="volunteer-name">Michael Chen</h4>
+                            <p class="volunteer-role">Health Program Lead</p>
+                            <p>"Helping seniors manage their health gives them independence—and that's priceless. Their gratitude fuels my commitment."</p>
+                        </div>
+                    </div>
+                    <div class="volunteer-card">
+                        <div class="volunteer-card-inner">
+                            <div class="volunteer-img">
+                                <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Volunteer">
+                            </div>
+                            <h4 class="volunteer-name">Sophia Rodriguez</h4>
+                            <p class="volunteer-role">Youth Volunteer</p>
+                            <p>"My 85-year-old buddy taught me to knit, and I taught her to use TikTok. It's amazing how much we learn from each other."</p>
+                        </div>
+                    </div>
+                    <div class="volunteer-card">
+                        <div class="volunteer-card-inner">
+                            <div class="volunteer-img">
+                                <img src="https://images.unsplash.com/photo-1573140247632-f8fd72241d40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Volunteer">
+                            </div>
+                            <h4 class="volunteer-name">Robert Taylor</h4>
+                            <p class="volunteer-role">Retired Volunteer</p>
+                            <p>"After retiring, I wanted purpose. Now I help seniors with home repairs—we're peers, supporting each other through life's challenges."</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -615,19 +767,23 @@
     <!-- CTA Section -->
     <section class="cta" id="get-involved">
         <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+            <h2>Your Kindness Can Change Lives</h2>
+            <p>Whether you donate time, resources, or refer a senior in need—every contribution makes a difference in their golden years</p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#" class="btn">Join as Volunteer</a>
+                <a href="#" class="btn">Donate Now</a>
+                <a href="#" class="btn">Refer Someone</a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
+                    <h3>Golden Years</h3>
+                    <p>Dedicated to honoring our elders with dignity, companionship, and care. Together, we can ensure no one ages alone.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -640,49 +796,49 @@
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
+                        <li><a href="#initiatives">Our Programs</a></li>
+                        <li><a href="#volunteers">Volunteers</a></li>
                         <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Our Programs</h3>
+                    <h3>Support</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
+                        <li><a href="#">Volunteer Guidelines</a></li>
+                        <li><a href="#">Service Request Form</a></li>
+                        <li><a href="#">Donation Transparency</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Compassion Lane, New York, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@goldenyears.org</p>
+                    <p><i class="fas fa-clock"></i> Hours: Mon-Sun, 9:00 AM - 6:00 PM</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2025 Golden Years Initiative | All Rights Reserved | 501(c)(3) Nonprofit</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // Mobile menu toggle
         document.querySelector('.mobile-menu').addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('active');
         });
 
-        // Counter Animation
+        // Counter animation
         function animateCounters() {
             const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
+            const speed = 200;
             
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
                 const count = +counter.innerText;
-                
                 const inc = target / speed;
                 
                 if(count < target) {
@@ -694,10 +850,9 @@
             });
         }
 
-        // Initialize counters when page loads
         window.addEventListener('load', animateCounters);
 
-        // Smooth scrolling for navigation links
+        // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -711,12 +866,26 @@
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
                     document.querySelector('nav ul').classList.remove('active');
                 }
             });
         });
+
+        // Volunteer slider
+        let currentSlide = 0;
+        const slider = document.querySelector('.slider-container');
+        const slides = document.querySelectorAll('.volunteer-card');
+        const slideWidth = slides[0].offsetWidth;
+        const totalSlides = slides.length;
+        const visibleSlides = window.innerWidth < 768 ? 1 : window.innerWidth < 992 ? 2 : 3;
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % (totalSlides - visibleSlides + 1);
+            slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        }
+
+        setInterval(nextSlide, 5000);
+        window.addEventListener('resize', () => location.reload());
     </script>
 </body>
-
 </html>
